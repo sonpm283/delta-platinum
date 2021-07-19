@@ -59,6 +59,7 @@ a,
 a:hover {
 	text-decoration: none;
 	color: unset;
+	transition: all 0.25s ease-in-out;
 }
 
 img {
@@ -260,16 +261,21 @@ img {
 	transition: all 0.35s ease;
 }
 
-.menumobile-list li a {
+.menumobile-list li.menumobile-item a.menumobile-link {
 	display: block;
 	padding: 10px 15px;
 	line-height: 24px;
 	color: #0c0c0c;
+	position: relative;
 }
 
-.menumobile-list li {
+.menumobile-list li.menumobile-item {
 	border-top: solid 1px #e4ebf0;
 	position: relative;
+}
+
+.menumobile-list li.menumobile-item.active {
+	background: #ebebeb;
 }
 
 .menumobile-list li i {
@@ -284,16 +290,44 @@ img {
 	color: #0c0c0c;
 }
 
-.menumobile-list li:first-child {
+.submenu-mb {
+	display: none;
+}
+
+.submenu-mb li {
+	background: #f5f4f4;
+	border-top: solid 1px #e4ebf0;
+}
+
+.submenu-mb li a {
+	display: block;
+	color: #0c0c0c;
+	padding: 10px 15px 10px 45px;
+	line-height: 22px;
+	position: relative;
+}
+
+.submenu-mb li a::before {
+	content: "";
+	top: 16px;
+	left: 25px;
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	border: solid 2px #d7d7d7;
+	border-radius: 50%;
+}
+
+.menumobile-list li.menumobile-item:first-child {
 	background-color: #f5f5f5;
 	font-weight: 700;
 }
 
-.menumobile-list li:last-child {
+.menumobile-list li.menumobile-item:last-child {
 	border-bottom: solid 1px #e4ebf0;
 }
 
-.menumobile-list li:first-child a {
+.menumobile-list li:first-child a.menumobile-link {
 	color: var(--main-color);
 }
 
@@ -324,6 +358,7 @@ img {
 	margin-bottom: 10px;
 	width: 40px;
 	height: 40px;
+	position: relative;
 }
 
 .item-link {
@@ -336,7 +371,7 @@ img {
 	width: 40px;
 	background-repeat: no-repeat;
 	background-position: center;
-	transition: width 300ms ease-in 0ms;
+	transition: width 0.3s ease-in 0ms;
 	cursor: pointer;
 	position: absolute;
 	right: 0;
@@ -345,8 +380,16 @@ img {
 	color: #82bb4e;
 }
 
-.item-link {
-	position: relative;
+.item-link span {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s ease-in;
+	color: var(--main-color);
+	margin-left: 10px;
 }
 
 .hotline::before {
@@ -389,7 +432,14 @@ img {
 	font-weight: 400;
 }
 
-.hotlink-item .item-link {
+.hotlink-item:hover .item-link {
+	width: 130px;
+	color: var(--main-color);
+}
+
+.hotlink-item:hover .item-link span {
+	opacity: 1;
+	visibility: visible;
 }
 
 /* ===============  Media Queries  =============== */

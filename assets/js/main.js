@@ -1,7 +1,7 @@
 $(document).ready(function() {
     menuMobile.init()
     mainSlide.init()
-   
+    slideDownMenu.init()
 });
 
 // main slide
@@ -14,7 +14,7 @@ const mainSlide = {
         $("#home-slide").owlCarousel({
             items: 1,
             dots: false,
-            loop: true,
+            loop: false,
             nav: false,
             autoplay: false,
         })
@@ -27,7 +27,7 @@ const menuMobile = {
         this.menuMobile()
     },
     menuMobile: function() {
-        const menuBtn = $(".menu-btn")
+        const menuBtn = $(".js-menu-btn")
         const menuMobile = $(".menumobile")
         const menuOverlay = $(".menumobile-overlay")
 
@@ -40,3 +40,27 @@ const menuMobile = {
         })
     }
 }
+
+
+// Menu slidedown
+const slideDownMenu = {
+    init: function () {
+        this.subMenuChild();
+    },
+    subMenuChild: function () {
+        $(".js-slide-down-menu").click(function (event) {
+            const target = $(this).parent().next(".submenu-mb");
+            const item = $(this).parent().parent(".menumobile-item");
+            if($(this).hasClass('fa fa-angle-down')) {
+                $(this).removeClass('fa fa-angle-down')
+                $(this).addClass('fa fa-angle-up')
+            } else if ($(this).hasClass('fa fa-angle-up')) {
+                $(this).removeClass('fa fa-angle-up')
+                $(this).addClass('fa fa-angle-down')
+            }
+            $(item).toggleClass("active")
+            $(target).slideToggle(300);
+             event.preventDefault();
+        });
+    },
+};
