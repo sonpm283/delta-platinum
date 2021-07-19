@@ -1,0 +1,64 @@
+/* ===============  Media Queries  =============== */
+
+@media screen and (min-width: 1366px) {
+	.container {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.menu {
+		display: none !important;
+	}
+
+	.nav {
+		height: 60px;
+	}
+
+	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.js-menu-btn {
+		display: block;
+	}
+
+	.menumobile {
+		display: block;
+	}
+
+	.banner-search {
+		top: 70px;
+	}
+
+	.home-title {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		background-color: var(--text-color);
+		position: static;
+		padding: 10px 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.hotlink {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hotlink {
+		top: 100px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+}

@@ -1,5 +1,4 @@
 /* ===============  Setting  =============== */
-
 :root {
 	--main-color: #7dce32;
 	--white-color: #fff;
@@ -443,7 +442,7 @@ img {
 .banner-search {
 	position: absolute;
 	top: 250px;
-	z-index: 3;
+	z-index: 1;
 }
 
 .home-title {
@@ -473,7 +472,7 @@ img {
 	color: #fff;
 }
 
-.search-select {
+#search-select {
 	height: 55px;
 	border: none;
 	outline: none;
@@ -542,61 +541,4 @@ img {
 
 .search-btn:hover {
 	background-color: #7dce32;
-}
-
-/* ===============  Media Queries  =============== */
-
-@media screen and (min-width: 1366px) {
-	.container {
-		max-width: 1200px;
-		width: 100%;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (max-width: 1199px) {
-	.menu {
-		display: none !important;
-	}
-
-	.nav {
-		height: 60px;
-	}
-
-	.logo {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.js-menu-btn {
-		display: block;
-	}
-
-	.menumobile {
-		display: block;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	.header {
-		background-color: var(--text-color);
-		position: static;
-		padding: 10px 0;
-	}
-}
-
-@media screen and (max-width: 767px) {
-	.hotlink {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.hotlink {
-		top: 100px;
-	}
-}
-
-@media screen and (max-width: 480px) {
 }
