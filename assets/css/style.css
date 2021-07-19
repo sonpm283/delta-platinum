@@ -1,0 +1,192 @@
+/* ===============  Setting  =============== */
+
+:root {
+	--main-color: #7dce32;
+	--white-color: #fff;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1;
+}
+
+input,
+button,
+select,
+textarea {
+	outline: none;
+	font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	font-weight: 400;
+}
+
+ul {
+	margin: 0;
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+input {
+	line-height: normal;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: unset;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* ===============  Fonts Import  =============== */
+/* 
+@font-face {
+  font-family: UTM Avo;
+  src: url(../fonts/UTM\ Avo.ttf);
+}
+
+@font-face {
+  font-family: SFU;
+  src: url(../fonts/SFUInsigniaRegular.TTF);
+} */
+
+/* ===============  Global style  =============== */
+
+.back-top {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s ease-in-out;
+	background: var(--main-color);
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	z-index: 99;
+}
+
+.back-top:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.back-top.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* ===============  Header  =============== */
+.header {
+	background: rgba(0, 0, 0, 0.13);
+	padding: 5px 0px 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.menu {
+	margin-left: 100px;
+}
+
+.menu-item ~ li {
+	margin-left: 30px;
+}
+
+.menu-item.has-sub-menu {
+	position: relative;
+}
+
+.sub-menu {
+	position: absolute;
+	width: 200px;
+	background-color: var(--white-color);
+}
+
+.sub-menu li {
+	padding: 0 10px;
+}
+
+.sub-menu li a {
+	line-height: 24px;
+	padding: 7px 5px 7px 0px;
+	display: block;
+	color: #0c0c0c;
+	font-weight: 400;
+}
+
+.sub-menu li a:hover {
+	color: var(--main-color);
+}
+
+.sub-menu li:not(:last-child) a {
+	border-bottom: solid 1px #e5e6ec;
+}
+
+.menu-link {
+	display: inline-block;
+	font-size: 18px;
+	color: var(--white-color);
+	line-height: 45px;
+}
+
+.menu-link.active,
+.menu-link:hover {
+	color: var(--main-color);
+}
+
+.menu-link i {
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+/* ===============  Media Queries  =============== */
+
+@media screen and (min-width: 1366px) {
+	.container {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 480px) {
+}
