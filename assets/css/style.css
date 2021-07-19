@@ -110,15 +110,34 @@ img {
 /* ===============  Header  =============== */
 .header {
 	background: rgba(0, 0, 0, 0.13);
-	padding: 5px 0px 20px;
+	padding: 12px 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 }
 
+.nav {
+	height: 80px;
+	position: relative;
+}
+
+.menu-btn {
+	display: none;
+}
+
+.menu-btn {
+	justify-self: flex-start;
+}
+
+.logo {
+	width: 170px;
+	line-height: 80px;
+	display: block;
+}
+
 .menu {
-	margin-left: 100px;
+	margin-left: 110px;
 }
 
 .menu-item ~ li {
@@ -129,10 +148,56 @@ img {
 	position: relative;
 }
 
+.menu-item.has-sub-menu:hover .sub-menu {
+	overflow: visible;
+	max-height: 3000px;
+	max-width: 3000px;
+	opacity: 1;
+	-webkit-transform: perspective(600px) rotateX(0deg);
+	-moz-transform: perspective(600px) rotateX(0deg);
+	-ms-transform: perspective(600px) rotateX(0deg);
+	-o-transform: perspective(600px) rotateX(0deg);
+	transform: perspective(600px) rotateX(0deg);
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease,
+		max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+	-o-transition: -o-transform 0.5s ease, opacity 0.2s ease,
+		max-height 0s step-end, max-width 0s step-end, padding 0s step-end;
+	transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end,
+		max-width 0s step-end, padding 0s step-end;
+}
+
 .sub-menu {
+	overflow: hidden;
+	display: block;
+	max-height: 0px;
+	max-width: 0px;
+	opacity: 0;
+	-webkit-transform: perspective(600px) rotateX(-90deg);
+	-moz-transform: perspective(600px) rotateX(-90deg);
+	-ms-transform: perspective(600px) rotateX(-90deg);
+	-o-transform: perspective(600px) rotateX(-90deg);
+	transform: perspective(600px) rotateX(-90deg);
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.6s ease,
+		max-height 0.6s step-end, max-width 0.6s step-end, padding 0.6s step-end;
+	-o-transition: -o-transform 0.5s ease, opacity 0.6s ease,
+		max-height 0.6s step-end, max-width 0.6s step-end, padding 0.6s step-end;
+	transition: transform 0.5s ease, opacity 0.6s ease, max-height 0.6s step-end,
+		max-width 0.6s step-end, padding 0.6s step-end;
 	position: absolute;
+	left: 5px;
 	width: 200px;
-	background-color: var(--white-color);
+	padding: 0;
+	background-color: #fff;
+	box-shadow: 0px 10px 21.6px 2.4px rgb(0 0 0 / 6%);
+	-webkit-box-shadow: 0px 10px 21.6px 2.4px rgb(0 0 0 / 6%);
+	-moz-box-shadow: 0px 10px 21.6px 2.4px rgba(0, 0, 0, 0.06);
+	-o-box-shadow: 0px 10px 21.6px 2.4px rgba(0, 0, 0, 0.06);
+	-os-box-shadow: 0px 10px 21.6px 2.4px rgba(0, 0, 0, 0.06);
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-o-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
 }
 
 .sub-menu li {
@@ -172,6 +237,81 @@ img {
 	margin-left: 10px;
 }
 
+.menumobile {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	display: none;
+}
+
+.menumobile-overlay {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.menumobile.active .menumobile-list {
+	transform: translateX(0%);
+}
+
+.menumobile-list {
+	position: absolute;
+	background-color: var(--white-color);
+	width: 280px;
+	height: 100vh;
+	transform: translateX(-100%);
+	transition: all 0.35s ease;
+}
+
+.menumobile-list li a {
+	display: block;
+	padding: 10px 15px;
+	line-height: 24px;
+	color: #0c0c0c;
+}
+
+.menumobile-list li {
+	border-top: solid 1px #e4ebf0;
+	position: relative;
+}
+
+.menumobile-list li i {
+	position: absolute;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: grid;
+	place-items: center;
+	color: #0c0c0c;
+}
+
+.menumobile-list li:first-child {
+	background-color: #f5f5f5;
+	font-weight: 700;
+}
+
+.menumobile-list li:last-child {
+	border-bottom: solid 1px #e4ebf0;
+}
+
+.menumobile-list li:first-child a {
+	color: var(--main-color);
+}
+
+.menumobile.active {
+	opacity: 1;
+	visibility: visible;
+}
+
 /* ===============  Media Queries  =============== */
 
 @media screen and (min-width: 1366px) {
@@ -179,6 +319,30 @@ img {
 		max-width: 1200px;
 		width: 100%;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.menu {
+		display: none !important;
+	}
+
+	.nav {
+		height: 60px;
+	}
+
+	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.menu-btn {
+		display: block;
+	}
+
+	.menumobile {
+		display: block;
 	}
 }
 
