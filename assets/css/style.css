@@ -452,7 +452,7 @@ img {
 }
 
 .banner-search-wrap {
-	margin: 80px 0 30px;
+	margin-top: 80px;
 }
 
 .select-item {
@@ -508,6 +508,11 @@ img {
 	border-left: 1px solid #eee;
 	padding-left: 20px;
 	cursor: pointer;
+	transition: all .25s ease-in;
+}
+
+.search-action:hover {
+	color: #82bb4e;
 }
 
 .search-action i {
@@ -541,4 +546,59 @@ img {
 
 .search-btn:hover {
 	background-color: #7dce32;
+}
+
+.advance {
+	background-color: var(--white-color);
+	height: 41px;
+	padding: 0 10px;
+	align-items: center;
+	display: none;
+}
+
+
+.advance-option {
+	max-width: 145px;
+}
+
+.advance select {
+	border: none;
+	cursor: pointer;
+	height: 40px;
+    max-width: 145px;
+	appearance: none;
+	width: 100%;
+	display: block;
+	padding: 0 20px;
+	background-image: url(/assets/images/ico-select.png);
+	background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: var(--white-color) !important;
+    padding-right: 28px;
+}
+
+.collection {
+	width: 55%;
+	margin: 0 auto;
+}
+
+.collection h3 {
+	color: var(--white-color);
+    display: block;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.collection-item a {
+	display: inline-block;
+	border: 1px #565d61 dashed;
+	width: 105px;
+    height: 105px;
+	display: grid;
+	place-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.collection-item a:hover {
+	background-color: var(--main-color);
 }

@@ -2,6 +2,7 @@ $(document).ready(function() {
     menuMobile.init()
     mainSlide.init()
     slideDownMenu.init()
+    advanceFilter.init()
 });
 
 // main slide
@@ -59,6 +60,20 @@ const slideDownMenu = {
                 $(this).addClass('fa fa-angle-down')
             }
             $(item).toggleClass("active")
+            $(target).slideToggle(300);
+             event.preventDefault();
+        });
+    },
+};
+
+
+const advanceFilter = {
+    init: function () {
+        this.advanceFilter();
+    },
+    advanceFilter: function () {
+        $(".js-search-action").click(function (event) {
+            const target = $(this).parent().parent().parent().next(".advance");
             $(target).slideToggle(300);
              event.preventDefault();
         });
