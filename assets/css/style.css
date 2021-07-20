@@ -72,6 +72,10 @@ img {
 	display: block;
 }
 
+.pdd-10 {
+	padding: 0 10px;
+}
+
 /* ===============  Global style  =============== */
 
 .back-top {
@@ -352,7 +356,7 @@ img {
 	position: fixed;
 	right: 0;
 	top: 150px;
-	z-index: 1;
+	z-index: 100;
 }
 
 .hotlink-item {
@@ -720,11 +724,7 @@ img {
     right: 0px;
 }
 
-.product-category li a.active {
-	color: var(--secondary-color);
-}
-
-
+.product-category li a.active,
 .product-category-mb li a.active {
 	color: var(--secondary-color);
 }
@@ -929,12 +929,12 @@ outline: none;
 }
 
 .project-item {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	position: relative;
 	overflow: hidden;
 }
 
-.project-item  span {
+.project-item a {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -942,11 +942,42 @@ outline: none;
 	font-size: 30px;
 	font-weight: 700;
 	bottom: 15%;
+	display: inline-block;
+	transition: all .3s  ease-in-out;
 }
+
+.project-item span {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: var(--white-color);
+	z-index: 2;
+	bottom: -10%;
+	font-size: 16px;
+	transition: all .4s ease-in-out;
+}
+
+.project-item:hover a {
+	bottom: 18%;
+}
+
+.project-item a:hover {
+	color: var(--main-color);
+}
+
+.project-item:hover span {
+	bottom: 10%;
+}
+
 
 .project-item img {
 	width: 100%;
 	object-fit: cover;
+	transition: all .3s ease-in-out;
+}
+
+.project-item:hover img {
+	transform: scale(1.1);
 }
 
 .typeproject {

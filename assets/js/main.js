@@ -143,7 +143,6 @@ const projectRent = {
 
 
 // tab product
-
 const tabProduct = {
     init: function() {
         this.tabProduct()
@@ -160,6 +159,7 @@ const tabProduct = {
             $(pane).fadeIn()
             event.preventDefault()
         })
+
         tabsMb.click(function(event) {
             tabsMb.removeClass("active")
             $(this).addClass("active")
@@ -169,11 +169,13 @@ const tabProduct = {
             $(".product-category-mb").removeClass("active")
             event.preventDefault()
         })
+        
         $(".product-category li:first .tab").click();
         $(".product-category-mb li:first .tab").click();
     }
 }
 
+// menu mb product
 const productMenu = {
     init: function() {
         this.productMenu()
