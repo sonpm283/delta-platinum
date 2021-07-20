@@ -501,7 +501,7 @@ img {
 	position: absolute;
 	height: 35px;
 	border: none;
-	right: 300px;
+	right: 273px;
 	top: 10px;
 	display: flex;
 	align-items: center;
@@ -511,7 +511,7 @@ img {
 }
 
 .search-action i {
-	padding: 0 5px;
+	padding-right: 10px;
 }
 
 .search-btn {
