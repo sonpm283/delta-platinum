@@ -178,4 +178,8 @@
 	.collection-item {
 		margin-left: 15px;
 	}
+
+	.select-item  {
+		width: 150px;
+	}
 }
