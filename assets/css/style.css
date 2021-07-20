@@ -64,7 +64,6 @@ a,
 a:hover {
 	text-decoration: none;
 	color: unset;
-	transition: all 0.25s ease-in-out;
 }
 
 img {
@@ -673,8 +672,9 @@ img {
 }
 
 .product-category-mb li a {
+	display: block;
 	text-transform: uppercase;
-	line-height: 35px !important;
+	line-height: 35px;
 }
 
 .page-heading {
@@ -1035,6 +1035,7 @@ outline: none;
 	border: solid 1px #ebebeb;
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
+	margin-bottom: 20px;
 }
 
 .news .page-heading-main {
@@ -1078,6 +1079,11 @@ outline: none;
     font-weight: 600;
     color: #0c0c0c;
     width: 100%;
+	transition: all .2s ease-in-out;
+}
+
+.news-title:hover {
+	color: var(--main-color);
 }
 
 .news-desc {
@@ -1106,4 +1112,35 @@ outline: none;
 	font-size: 14px;
     line-height: 30px;
     font-weight: 600;
+}
+
+.news-horizontal {
+    padding-bottom: 17px;
+    margin-bottom: 17px;
+    border-bottom: solid 1px #ebebeb;
+    width: 100%;
+}
+
+.news-horizontal-img {
+	width: 120px;
+}
+
+.news-horizontal-content {
+	width: calc(100% - 120px);
+    padding: 0 15px;
+}
+
+.news-horizontal-content .new-time  {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.news-horizontal-title {
+	font-size: 14px;
+	transition: all .2s ease-in-out;
+}
+
+.news-horizontal-title:hover {
+	color: var(--main-color);
 }
