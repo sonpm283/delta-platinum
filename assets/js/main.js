@@ -5,6 +5,8 @@ $(document).ready(function() {
     advanceFilter.init()
     productSlide.init()
     projectRent.init()
+    tabProduct.init()
+    productMenu.init()
 });
 
 // Main slide
@@ -88,7 +90,7 @@ const productSlide = {
         this.productSlide();
     },
     productSlide: function() {
-        $("#product-slide").owlCarousel({
+        $(".product-slide").owlCarousel({
             items: 3,
             dots: true,
             loop: false,
@@ -135,6 +137,51 @@ const projectRent = {
                     items:3,
                 }
             }
+        })
+    }
+}
+
+
+// tab product
+
+const tabProduct = {
+    init: function() {
+        this.tabProduct()
+    },
+    tabProduct: function() {
+        const tabs = $(".product-category li .tab");
+        const tabsMb = $(".product-category-mb li .tab");
+        const panes =  $(".pane")
+        tabs.click(function(event) {
+            tabs.removeClass("active")
+            $(this).addClass("active")
+            panes.hide()
+            const pane = $(this).attr("data-pane")
+            $(pane).fadeIn()
+            event.preventDefault()
+        })
+        tabsMb.click(function(event) {
+            tabsMb.removeClass("active")
+            $(this).addClass("active")
+            panes.hide()
+            const pane = $(this).attr("data-pane")
+            $(pane).fadeIn()
+            $(".product-category-mb").removeClass("active")
+            event.preventDefault()
+        })
+        $(".product-category li:first .tab").click();
+        $(".product-category-mb li:first .tab").click();
+    }
+}
+
+const productMenu = {
+    init: function() {
+        this.productMenu()
+    },
+    productMenu: function() {
+        const productMenuBtn = $(".js-product-menu")
+        productMenuBtn.click(function() {
+            $(".product-category-mb").toggleClass("active")
         })
     }
 }
