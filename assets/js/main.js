@@ -141,7 +141,6 @@ const projectRent = {
     }
 }
 
-
 // tab product
 const tabProduct = {
     init: function() {
@@ -169,7 +168,7 @@ const tabProduct = {
             $(".product-category-mb").removeClass("active")
             event.preventDefault()
         })
-        
+
         $(".product-category li:first .tab").click();
         $(".product-category-mb li:first .tab").click();
     }
