@@ -188,7 +188,7 @@ img {
 	-moz-transform-origin: 0% 0%;
 	-ms-transform-origin: 0% 0%;
 	-o-transform-origin: 0% 0%;
-	transform-origin: 0% 0%;
+	transform-origin: 0% 0%;	
 }
 
 .sub-menu li {
@@ -572,7 +572,6 @@ img {
 	border-top: unset;
 }
 
-
 .advance-option {
 	max-width: 145px;
 }
@@ -609,7 +608,6 @@ img {
     margin: 30px 0;
 }
 
-
 .collection-item a {
 	display: inline-block;
 	border: 1px #565d61 dashed;
@@ -620,7 +618,6 @@ img {
 	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 4px;
 	/* border-color: #82bb4e; */
-	
 }
 
 .collection-item p {
@@ -638,7 +635,6 @@ img {
 .collection-item:hover a{
 	background-color: var(--main-color);
 }
-
 
 .collection-item:hover p {
 	color: var(--main-color);
@@ -660,7 +656,7 @@ img {
 }
 
 .product {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .product-header-menu {
@@ -724,11 +720,9 @@ img {
 	transition: all .3s ease-in-out;
 }
 
-
 .product-img:hover::before {
 	opacity: .5;
 }
-
 
 .product-img img {
 	border-top-left-radius: 8px;
@@ -837,6 +831,46 @@ img {
     color: #989898;
 }
 
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+  
+.owl-dots {
+text-align: center;
+padding-bottom: 50px;
+}
+
+.owl-dots button.owl-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+display: inline-block;
+background: #cdcfdd;
+margin: 0 3px;
+}
+
+.owl-dots button.owl-dot.active {
+background-color: var(--main-color);
+}
+
+.owl-dots button.owl-dot:focus {
+outline: none;
+}
+
+.product-wrap .owl-stage-outer {
+	border-radius: 8px;
+}
+
 .project-item {
 	margin-bottom: 30px;
 	position: relative;
@@ -874,3 +908,34 @@ img {
 .project-for-rent .page-heading-main {
 	margin-bottom: 30px;
 }
+
+.project-for-rent .owl-nav button {
+	position: absolute;
+	right: 0;
+	top: -80px;
+	outline: none;
+}
+
+.project-for-rent .owl-nav button i {
+	font-size: 25px;
+	color: var(--text-color);
+	width: 30px;
+    height: 30px;
+	background-color: var(--white-color);
+	display: grid;
+	place-items: center;
+	transition: all .2s ease-in-out;
+}
+
+.project-for-rent .owl-nav .owl-prev {
+	right: 40px;
+}
+
+.project-for-rent .owl-nav i:hover {
+	background-color: var(--main-color);
+}
+
+.project-for-rent .owl-nav .disabled i {
+	opacity: .7;
+}
+

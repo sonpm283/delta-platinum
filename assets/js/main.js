@@ -3,10 +3,12 @@ $(document).ready(function() {
     mainSlide.init()
     slideDownMenu.init()
     advanceFilter.init()
+    productSlide.init()
+    projectRent.init()
 });
 
-// main slide
-const navText = ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>" ];
+// Main slide
+const navText = ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>" ];
 const mainSlide = {
     init : function () {
         this.mainSlide();
@@ -22,7 +24,7 @@ const mainSlide = {
     }
 }
 
-// menu mobile 
+// Menu mobile 
 const menuMobile = {
     init: function() {
         this.menuMobile()
@@ -66,7 +68,7 @@ const slideDownMenu = {
     },
 };
 
-
+// filter
 const advanceFilter = {
     init: function () {
         this.advanceFilter();
@@ -79,3 +81,60 @@ const advanceFilter = {
         });
     },
 };
+
+// product slide
+const productSlide = {
+    init : function () {
+        this.productSlide();
+    },
+    productSlide: function() {
+        $("#product-slide").owlCarousel({
+            items: 3,
+            dots: true,
+            loop: false,
+            nav: false,
+            autoplay: false,
+            margin: 20,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,  
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        })
+    }
+}
+
+
+const projectRent = {
+    init : function () {
+        this.projectRent();
+    },
+    projectRent: function() {
+        $("#project-rent-slide").owlCarousel({
+            items: 3,
+            dots: false,
+            loop: false,
+            nav: true,
+            autoplay: false,
+            margin: 20,
+            navText: navText,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,  
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        })
+    }
+}
