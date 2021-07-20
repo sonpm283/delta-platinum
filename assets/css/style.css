@@ -652,18 +652,24 @@ img {
 	font-size: 28px;
 	text-transform: uppercase;
 	color: var(--secondary-color);
+	line-height: 40px;
 }
 
 .page-heading span {
 	color: var(--text-color);
 }
 
-
 .product {
 	margin-bottom: 30px;
 }
 
-.product-header-left p {
+.product-header-menu {
+	display: none;
+	color: var(--main-color);
+	font-size: 25px;
+}
+
+.page-heading-main p {
 	font-size: 14px;
     color: #8c8c8c;
     font-weight: 400;
@@ -831,4 +837,40 @@ img {
     color: #989898;
 }
 
+.project-item {
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
 
+.project-item  span {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: var(--white-color);
+	font-size: 30px;
+	font-weight: 700;
+	bottom: 15%;
+}
+
+.project-item img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.typeproject {
+	background-color: var(--white-color);
+	padding: 60px 0;
+}
+
+.typeproject .page-heading-main {
+	margin-bottom: 30px;
+}
+
+.project-for-rent {
+	padding-top: 60px;
+}
+
+.project-for-rent .page-heading-main {
+	margin-bottom: 30px;
+}

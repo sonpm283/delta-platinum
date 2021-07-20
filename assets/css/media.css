@@ -120,6 +120,14 @@
 	.collection-item p {
 		color: var(--text-color);
 	}
+
+	.product-header-menu  {
+		display: block;
+	}
+
+	.product-category {
+		display: none !important;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -128,6 +136,14 @@
 	}
 	.collection {
 		width: 100%;
+	}
+
+	.page-heading {
+		font-size: 20px;
+	}
+
+	.page-heading-main p {
+		font-size: 12px;
 	}
 }
 
