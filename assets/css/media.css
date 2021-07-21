@@ -144,6 +144,39 @@
 	.newsletter .page-heading-main {
 		margin-bottom: 20px;
 	}
+
+	.product-info {
+		flex-wrap: wrap;
+	}
+
+	.info-desc {
+		width: 100%;
+		border: none;
+	}
+
+	.sale-info {
+		width: 100%;
+	}
+
+	.sale-contact {
+		padding: 0;
+	}
+
+	.sale-avatar  {
+		justify-content: flex-start;
+	}
+
+	.product-description {
+		margin-bottom: 40px;
+	}
+
+	.sale-contact li p {
+		width: 120px;
+	}
+
+	.sale-contact li span, .sale-contact li a  {
+		width: calc(100% - 120px);
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -269,5 +302,13 @@
 
 	.news .new-time span:last-child {
 		display: none;
+	}
+
+	.bread-crumb-list li span {
+		padding: 0 3px;
+	}
+
+	.product-description-title {
+		font-size: 23px;
 	}
 }

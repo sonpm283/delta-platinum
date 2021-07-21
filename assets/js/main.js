@@ -121,7 +121,7 @@ const projectRent = {
     this.projectRent();
   },
   projectRent: function () {
-    $("#project-rent-slide").owlCarousel({
+    $(".project-rent-slide").owlCarousel({
       items: 3,
       dots: false,
       loop: false,
@@ -268,7 +268,7 @@ thumbs
     thumbs.find(".owl-item").eq(0).addClass("current");
   })
   .owlCarousel({
-    items: 4,
+    items: 3,
     dots: false,
     nav: true,
     navText: navText,
@@ -276,6 +276,17 @@ thumbs
     slideSpeed: 500,
     slideBy: 4,
     responsiveRefreshRate: 100,
+    responsive: {
+        0: {
+          items: 2,
+        },
+        600: {
+          items: 4,
+        },
+        1000: {
+          items: 4,
+        },
+      },
   })
   .on("changed.owl.carousel", syncPosition2);
 
