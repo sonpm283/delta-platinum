@@ -110,7 +110,7 @@
 	.collection-item a {
 		background-color: #82bb4e;
 		border: 1px #565d61 dashed;
-		
+		border-color: #8aea32;
 	}
 
 	.collection-item:hover a {
