@@ -7,6 +7,7 @@ $(document).ready(function() {
     projectRent.init()
     tabProduct.init()
     productMenu.init()
+    projectSale.init();
 });
 
 // Main slide
@@ -119,6 +120,34 @@ const projectRent = {
     },
     projectRent: function() {
         $("#project-rent-slide").owlCarousel({
+            items: 3,
+            dots: false,
+            loop: false,
+            nav: true,
+            autoplay: false,
+            margin: 20,
+            navText: navText,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,  
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        })
+    }
+}
+
+const projectSale = {
+    init : function () {
+        this.projectSale();
+    },
+    projectSale: function() {
+        $("#project-for-sale").owlCarousel({
             items: 3,
             dots: false,
             loop: false,

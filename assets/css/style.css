@@ -4,6 +4,7 @@
 	--white-color: #fff;
 	--text-color: #0c0c0c;
 	--secondary-color: #fb6b26;
+	--bg-color:#f6f7f9;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-	background: #f6f7f9;
+	background: var(--bg-color)
 }
 
 *,
@@ -381,6 +382,7 @@ img {
 	font-weight: bold;
 	text-decoration: none;
 	color: #82bb4e;
+	border: solid 1px var(--main-color);
 }
 
 .item-link span {
@@ -988,22 +990,27 @@ outline: none;
 	margin-bottom: 30px;
 }
 
-.project-for-rent {
+.project-for-rent,
+.project-for-sale {
 	padding: 60px 0;
 }
 
-.project-for-rent .page-heading-main {
+.project-for-rent .page-heading-main,
+.project-for-sale .page-heading-main {
 	margin-bottom: 30px;
 }
 
-.project-for-rent .owl-nav button {
+.project-for-rent .owl-nav button,
+.project-for-sale .owl-nav button
+ {
 	position: absolute;
 	right: 0;
 	top: -80px;
 	outline: none;
 }
 
-.project-for-rent .owl-nav button i {
+.project-for-rent .owl-nav button i,
+.project-for-sale .owl-nav button i{
 	font-size: 25px;
 	color: var(--text-color);
 	width: 30px;
@@ -1014,15 +1021,18 @@ outline: none;
 	transition: all .2s ease-in-out;
 }
 
-.project-for-rent .owl-nav .owl-prev {
+.project-for-rent .owl-nav .owl-prev,
+.project-for-sale .owl-nav .owl-prev {
 	right: 40px;
 }
 
-.project-for-rent .owl-nav i:hover {
+.project-for-rent .owl-nav i:hover,
+.project-for-sale .owl-nav i:hover {
 	background-color: var(--main-color);
 }
 
-.project-for-rent .owl-nav .disabled i {
+.project-for-rent .owl-nav .disabled i,
+.project-for-sale .owl-nav i:hover {
 	opacity: .7;
 }
 
@@ -1115,8 +1125,8 @@ outline: none;
 }
 
 .news-horizontal {
-    padding-bottom: 17px;
-    margin-bottom: 17px;
+    padding-bottom: 16.5px;
+    margin-bottom: 16.5px;
     border-bottom: solid 1px #ebebeb;
     width: 100%;
 }
