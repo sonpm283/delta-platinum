@@ -193,10 +193,24 @@
 		padding: 0 10px;
 		font-size: 12px;
 		line-height: 40px;
+		margin-right: 15px;
 	}
 
 	.newsletter .form-gr input::placeholder {
 		font-size: 12px;
+	}
+
+	.mb-left {
+		text-align: left !important;
+	}
+
+	.footer-title.right::before {
+		right: unset;
+		left: 0;
+	}
+
+	.footer-item {
+		margin-bottom: 15px;
 	}
 	
 }
