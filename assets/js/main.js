@@ -8,6 +8,7 @@ $(document).ready(function() {
     tabProduct.init()
     productMenu.init()
     projectSale.init();
+    newsSlide.init()
 });
 
 // Main slide
@@ -212,6 +213,35 @@ const productMenu = {
         const productMenuBtn = $(".js-product-menu")
         productMenuBtn.click(function() {
             $(".product-category-mb").toggleClass("active")
+        })
+    }
+}
+
+
+const newsSlide = {
+    init : function () {
+        this.newsSlide();
+    },
+    newsSlide: function() {
+        $("#news-slide").owlCarousel({
+            items: 3,
+            dots: false,
+            loop: false,
+            nav: true,
+            autoplay: false,
+            margin: 30,
+            navText: navText,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,  
+                },
+                1000:{
+                    items:3,
+                }
+            }
         })
     }
 }

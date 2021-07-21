@@ -1154,3 +1154,50 @@ outline: none;
 .news-horizontal-title:hover {
 	color: var(--main-color);
 }
+
+.news-bds {
+	background-color: var(--white-color);
+	padding: 60px 0;
+}
+
+.news-bds .page-heading-main {
+	margin-bottom: 40px;
+}
+
+.news-bds .owl-carousel .owl-item img {
+	width: unset;
+}
+
+.news-bds .owl-nav button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	outline: none;
+}
+
+.news-bds .owl-nav button i{
+	font-size: 25px;
+	color: var(--text-color);
+	width: 30px;
+    height: 40px;
+	background-color: var(--white-color);
+	display: grid;
+	place-items: center;
+	transition: all .2s ease-in-out;
+}
+
+.news-bds .owl-nav .owl-prev {
+	left: 0;
+}
+
+.news-bds .owl-nav .owl-next {
+	right: 0;
+}
+
+.news-bds .owl-nav i:hover {
+	background-color: var(--main-color);
+}
+
+.news-bds .owl-nav .disabled {
+	opacity: .7;
+}
