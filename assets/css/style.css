@@ -589,7 +589,7 @@ img {
 	width: 100%;
 	display: block;
 	padding: 0 20px;
-	background-image: url(/assets/images/ico-select.png);
+	background-image: url(../images/ico-select.png);
 	background-repeat: no-repeat;
     background-position: right 10px center;
     background-color: var(--white-color) !important;
@@ -1203,7 +1203,7 @@ outline: none;
 }
 
 .newsletter {
-	background: url(/assets/images/bg_subscribe.jpg) no-repeat center/cover;
+	background: url(../images/bg_subscribe.jpg) no-repeat center/cover;
 	padding: 80px 0;	
 }
 
@@ -1264,7 +1264,7 @@ outline: none;
 
 .footer {
 	width: 100%;
-    background-image: url(/assets/images/bg_footer.png);
+    background-image: url(../images/bg_footer.png);
     background-size: cover;
     padding: 40px 0 0;
 }
@@ -1357,7 +1357,6 @@ outline: none;
 .copyright a {
 	color: var(--main-color);
 }
-
 
 .outer { margin:0 auto;
 	max-width:800px;
