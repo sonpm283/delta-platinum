@@ -347,3 +347,8 @@ const backTop = {
           });
     }
 }
+
+$('#example-2').elevateZoom({
+    zoomType : "inner",
+    cursor: "crosshair"
+});
