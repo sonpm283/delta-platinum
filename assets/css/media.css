@@ -198,4 +198,8 @@
 	.select-item  {
 		width: 150px;
 	}
+	
+	.news .new-time span:last-child {
+		display: none;
+	}
 }
