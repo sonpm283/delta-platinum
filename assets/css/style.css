@@ -80,19 +80,33 @@ img {
 
 .back-top {
   position: fixed;
-  right: 50px;
+  right: 20px;
   bottom: 50px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
-  background: var(--main-color);
+  background: #82bb4e;
   color: var(--white-color);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   z-index: 99;
+}
+
+.back-top i {
+	font-size: 20px;
+}
+
+.back-top:hover {
+	text-decoration: none;
+	color: var(--white-color);
+}
+  
+.back-top.active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .home-slide-item {
@@ -111,15 +125,7 @@ img {
     text-transform: uppercase;
 }
 
-.back-top:hover {
-  text-decoration: none;
-  color: var(--white-color);
-}
 
-.back-top.active {
-  opacity: 1;
-  visibility: visible;
-}
 
 .bread-crumb {
 	padding: 20px 0;

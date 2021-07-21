@@ -9,6 +9,7 @@ $(document).ready(function () {
   productMenu.init();
   projectSale.init();
   newsSlide.init();
+  backTop.init();
 });
 
 // Main slide
@@ -330,3 +331,19 @@ thumbs.on("click", ".owl-item", function (e) {
   var number = $(this).index();
   bigimage.data("owl.carousel").to(number, 300, true);
 });
+
+
+const backTop = {
+    init: function() {
+        this.backTop()
+    },
+    backTop: function() {
+        $(window).scroll(function() {
+            if($(window).scrollTop() > 150) {
+                $('.back-top').addClass('active')
+            }else {
+                $('.back-top').removeClass('active')
+            }
+          });
+    }
+}
