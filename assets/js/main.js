@@ -291,7 +291,6 @@ const backTop = {
 }
 
 
-
 const thumb = $(".thumb-img")
 const thumbBig = $(".thumb-big")
 

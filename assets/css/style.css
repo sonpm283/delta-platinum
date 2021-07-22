@@ -1440,6 +1440,11 @@ img {
   padding: 10px;
 }
 
+
+#thumbs .item:hover {
+	border-color: var(--main-color);
+}
+
 #thumbs .owl-item img {
 	height: 100%;
 	object-fit: cover;
@@ -1485,6 +1490,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   outline: none;
+  box-shadow: 0px 10px 21.6px 2.4px rgb(0 0 0 / 6%);
 }
 
 #thumbs .owl-nav button i {
@@ -1693,6 +1699,7 @@ img {
   display: grid;
   place-items: center;
   transition: all 0.2s ease-in-out;
+
 }
 
 .news-post .project-for-rent .owl-nav button i:hover,
